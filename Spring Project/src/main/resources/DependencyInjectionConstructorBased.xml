@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="student"
+		class="com.spring.ioc.beanfactory.di.constructor.Student">
+		<constructor-arg index="0" value="444" />
+		<constructor-arg index="1" value="Sunny" />
+		<constructor-arg index="2" ref="mark" />
+	</bean>
+
+	<bean name="mark"
+		class="com.spring.ioc.beanfactory.di.constructor.Mark">
+		<constructor-arg index="0" value="14" />
+		<constructor-arg index="1" value="47" />
+	</bean>
+	
+	<bean name="employee" class="com.spring.ioc.beanfactory.di.constructor.Employee">
+		<constructor-arg index="0" value="1027334" />
+		<constructor-arg index="1" value="Arjun" />
+		<constructor-arg index="2" ref="address" />
+	</bean>
+		<bean name="address"
+		class="com.spring.ioc.beanfactory.di.constructor.Address">
+		<constructor-arg index="0" value="Ranbhumi" />
+		<constructor-arg index="1" value="Kurukshetra" />
+	</bean>
+	
+</beans>
