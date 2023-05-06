@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="book1" class="com.spring.assignment.library.entity.Book">
+		<property name="id" value="${book1.id}" />
+		<property name="name" value="${book1.name}" />
+		<property name="category" value="${book1.category}" />
+		<property name="description" value="${book1.description}" />
+		<property name="price" value="${book1.price}" />
+		<property name="authors">
+			<list>
+				<ref bean="author1" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="book2" class="com.spring.assignment.library.entity.Book">
+		<property name="id" value="${book2.id}" />
+		<property name="name" value="${book2.name}" />
+		<property name="category" value="${book2.category}" />
+		<property name="description" value="${book2.description}" />
+		<property name="price" value="${book2.price}" />
+		<property name="authors">
+			<list>
+				<ref bean="author2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="book3" class="com.spring.assignment.library.entity.Book">
+		<property name="id" value="${book3.id}" />
+		<property name="name" value="${book3.name}" />
+		<property name="category" value="${book3.category}" />
+		<property name="description" value="${book3.description}" />
+		<property name="price" value="${book3.price}" />
+		<property name="authors">
+			<list>
+				<ref bean="author2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="book4" class="com.spring.assignment.library.entity.Book">
+		<property name="id" value="${book4.id}" />
+		<property name="name" value="${book4.name}" />
+		<property name="category" value="${book4.category}" />
+		<property name="description" value="${book4.description}" />
+		<property name="price" value="${book4.price}" />
+		<property name="authors">
+			<list>
+				<ref bean="author1" />
+				<ref bean="author2" />
+				<ref bean="author3" />
+			</list>
+		</property>
+	</bean>
+</beans>
